@@ -1,0 +1,38 @@
+{
+	"name": "ABI Development",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": { "VARIANT": "focal" }
+	},
+	"remoteUser": "vscode",
+	"customizations": {
+		"settings": {
+			"vscode": {
+				"settings": {
+					"http.proxtStrictSSL": false,
+					"http.proxy": "http://proxy-dmz.intel.com:912",
+					"shellformat.useEditorConfig": true
+				}
+			}
+		},
+		"extensions": [
+			"aaron-bond.better-comments",
+			"mhutchie.git-graph",
+			"DavidAnsoin.vscode-markdownlint",
+			"eamodio.gitlens",
+			"EditorConfig.EditorConfig",
+			"esbenp.prettier-vscode",
+			"foxundermoon.shell-format",
+			"hashicorp.hcl",
+			"hashicorp.terraform",
+			"hillleer.yaml-plus-json",
+			"mads-hartmann.bash-ide-vscode",
+			"mikestead.dotnet",
+			"redhat.ansible",
+			"redhat.vscode-yaml",
+			"timongwong.shellcheck",
+			"yzhang.markdown-all-in-one"
+		]
+	},
+	"postCreateCommand": "pre-commit install --install-hooks"
+}
